@@ -726,7 +726,8 @@
         div#tagpopup { background: #4f535b; border: 1px solid #000000 }
         div#tagpopup h2:hover { color: #ffffff }
         img.ygm { filter: brightness(100); }
-        #nb + div { background: #4f535b !important }`
+        #nb + div { background: #4f535b !important }
+        div#ehs-introduce-box { background: #4f535b }`
     } else if (/e-hentai\.org\/mpv\//.test(windowUrl)) {
       customDarkStyles += `
         div.mi2, div.mi3, div#bar3 img { filter: invert(0.8); }`
@@ -4753,10 +4754,10 @@
           box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.6); font-size: 6vh !important; line-height: 6vh; }`
     } else if (settings.addJumpButtons.jumpButtonStyle === 'slide-in rectangular buttons') {
       jumpButtonStyles = `
-        #jumpButtonHost { height: 20vh; width: 10vw; position: fixed; right: -8.5vw; bottom: 2vh; z-index: 3;
+        #jumpButtonHost { height: 16vh; width: 4.5vw; position: fixed; right: -3vw; bottom: 2vh; z-index: 3;
           box-shadow: 0 0 1vh 0 rgba(0, 0, 0, 0.6); transition: 0.3s; }
         #jumpButtonHost:hover { right: -3px; transition: 0.3s; }
-        #jumpToTopButton, #jumpToBottomButton { height: 10vh; width: 10vw; margin: auto; font-size: 6vh !important;
+        #jumpToTopButton, #jumpToBottomButton { height: 8vh; width: 4.5vw; margin: auto; font-size: 6vh !important;
           line-height: 6vh; }
         #jumpToTopButton { border-radius: 3px 0 0 0; border-bottom: 0; }
         #jumpToBottomButton { border-radius: 0 0 0 3px; border-top: 0; }`
