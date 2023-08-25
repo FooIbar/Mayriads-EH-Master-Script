@@ -797,7 +797,7 @@
       customDarkStyles += `
         body > div:first-child { border-radius: 9px; background: #4f535b !important; border-color: #000000 !important; }
         #as { padding-bottom: 0 !important; background: #4f535b !important; border-color: #aeaeae !important; }`
-    } else if (windowUrl.includes('tools.php?act=track_expunge')) {
+    } else if (windowUrl.includes('tools/track_expunge')) {
       // Using the brightness filter seems to disfigure the text in anchor elements on Firefox, so a more hardcoded
       // approach is used below. It is likely caused by bitmap conversion of ClearType text. Revoked expunge petitions
       // will still appear disfigured because they cannot be identified via CSS. If Firefox fixes this problem with
@@ -810,13 +810,16 @@
         /* avoid application to entire tables */
         body > div > div > table > tbody > tr:nth-child(5) > td:nth-child(2),
         body > div > div > table > tbody > tr:nth-child(8) > td:nth-child(2) { filter: none; }`
-    } else if (windowUrl.includes('tools.php?act=track_rename')) {
+    } else if (windowUrl.includes('tools/track_rename')) {
       customDarkStyles += `
         /* cover submitted rename titles */
         body > div > div > div > div:nth-child(1),
         /* cover the vote details but avoid application to current and original titles and usernames */
         body > div > div:nth-child(3) td:not(:nth-child(3)),
         body > div > div:nth-child(5) td:not(:nth-child(3)) { filter: brightness(2); }`
+    } else if (windowUrl.includes('tools/tagapprove')) {
+      customDarkStyles += `
+        .sources { border: 1px solid #000000; background: #4f535b; }`
     }
 
     const scientificDarkStylesElement = appendStyleText(document.documentElement, 'scientificDarkStyles',
@@ -1769,7 +1772,7 @@
     } else if (windowUrl.includes('exhentai.org/tos.php')) {
       // Redirect the terms of service page in the EX upload interface, because this EX version does not exist.
       window.location.assign(windowUrl.replace('exhentai.org', 'e-hentai.org'))
-    } else if (windowUrl.includes('tools.php?act=track_rename')) {
+    } else if (windowUrl.includes('tools/track_rename')) {
       // Allow titles to wrap to next line on rename tracker to ease reading and remove the need to scroll horizontally.
       designFixesStyles += `
         /* wrap submitted rename titles on rename tracker */
@@ -2240,7 +2243,7 @@
       }
 
       const newMessagesButton = document.querySelector('#userlinks a[href *= "act=Msg"]')
-      if (typeof newMessagesButton !== 'undefined') {
+      if (newMessagesButton !== null) {
         const unreadPmCount = newMessagesButton.textContent.match(/\d+/)[0]
         if (unreadPmCount > 0) {
           newMessagesButton.style.color = 'red'
