@@ -556,6 +556,10 @@
       /* index search/navigation */
       .searchwarn { color: #FB7878 }
       .searchnav div > span { color: #777 }
+      #rangebar { background: #575b62 }
+      #rangebar div { background: #DDDDDD45 }
+      #rangebar div[data-inrange] { background: radial-gradient(#DDDDDDF2, #DDDDDDA1) }
+      #rangebar a:hover > div { background: #EEEEEE }
       /* shared table stuff */
       div.itg { border-top: 2px ridge #3c3c3c; border-bottom: 2px ridge #3c3c3c }
       table.itg { border: 2px ridge #3c3c3c }
@@ -901,6 +905,10 @@
       /* index search/navigation */
       .searchwarn { color: #D71F1F }
       .searchnav div > span { color: #CCCCCC }
+      #rangebar { background: #EAE8DB }
+      #rangebar div { background: #5C0D113D }
+      #rangebar div[data-inrange] { background: radial-gradient(#5C0D11B0, #5C0D1196) }
+      #rangebar a:hover > div { background: #5C0D11 }
       /* shared table stuff */
       div.itg { border-top: 2px ridge #5C0D12; border-bottom: 2px ridge #5C0D12 }
       table.itg { border: 2px ridge #5C0D12 }
