@@ -731,7 +731,7 @@
         div#tagpopup h2:hover { color: #ffffff }
         img.ygm { filter: brightness(100); }
         #nb + div { background: #4f535b !important }
-        div#ehs-introduce-box { background: #4f535b }`
+        :root #ehs-introduce-box { background: #4f535b; .ehs-title { border-bottom: 1px solid #000000 } }`
     } else if (/e-hentai\.org\/mpv\//.test(windowUrl)) {
       customDarkStyles += `
         div.mi2, div.mi3, div#bar3 img { filter: invert(0.8); }`
@@ -5075,4 +5075,5 @@
     setTimeout(() => { URL.revokeObjectURL(downloadLink.href) }, 1000)
   }
 })()
+
 
