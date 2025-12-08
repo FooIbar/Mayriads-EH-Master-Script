@@ -11,7 +11,8 @@
 // @match           https://e-hentai.org/*
 // @match           https://exhentai.org/*
 // @match           https://repo.e-hentai.org/*
-// @match           https://upld.e-hentai.org/*
+// @match           https://upload.e-hentai.org/*
+// @match           https://upld.exhentai.org/*
 // @match           https://forums.e-hentai.org/*
 // @match           https://hentaiverse.org/*
 // @connect         self
@@ -1201,7 +1202,7 @@
       pageType = 'MPV view'
     } else if (/e(?:-|x)hentai\.org\/s\/[0-9a-z]+/.test(windowUrl)) {
       pageType = 'image view'
-    } else if (/upld\.e-hentai\.org|exhentai\.org\/upld/.test(windowUrl)) {
+    } else if (/upload\.e-hentai\.org|upld\.exhentai\.org\/upld/.test(windowUrl)) {
       pageType = 'upload management'
     } else if (windowUrl.includes('forums.e-hentai.org')) {
       pageType = 'EH forums'
@@ -1816,9 +1817,9 @@
       addNavigationButton(navigationBar, 'Wiki', 'https://ehwiki.org/')
       // This does not relicate the "HentaiVerse" -> "HV" behaviour from the span elements when screen width is limited.
       addNavigationButton(navigationBar, 'HentaiVerse', 'https://hentaiverse.org/')
-      if (windowUrl.includes('exhentai.org/upld/')) {
-        addNavigationButton(navigationBar, 'To E-Hentai', windowUrl.replace('exhentai.org/upld/',
-          'upld.e-hentai.org/'))
+      if (windowUrl.includes('upld.exhentai.org/upld/')) {
+        addNavigationButton(navigationBar, 'To E-Hentai', windowUrl.replace('upld.exhentai.org/upld/',
+          'upload.e-hentai.org/'))
       } else {
         addNavigationButton(navigationBar, 'To E-Hentai', windowUrl.replace('exhentai.org', 'e-hentai.org'))
       }
