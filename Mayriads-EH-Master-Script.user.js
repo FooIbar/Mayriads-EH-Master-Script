@@ -630,6 +630,7 @@
       div#gd4 { border-left: 1px solid #000000; border-right: 1px solid #000000 }
       div#gdt { background: #4f535b; border: 1px solid #000000 }
       div#gdt img { border: 1px solid #000000 }
+      .gt100 div[title],.gt200 div[title],.gt400 div[title]{border:1px solid #000000}
       .g3 a { color: #FF4A4A }
       div.gt { border: 1px solid #989898; background: #4f535b }
       div.gtl { border: 1px dashed #8c8c8c; background: #4f535b }
@@ -979,6 +980,7 @@
       div#gd4 { border-left: 1px solid #5C0D12; border-right: 1px solid #5C0D12 }
       div#gdt { background: #EDEBDF; border: 1px solid #5C0D12 }
       div#gdt img { border: 1px solid #5C0D12 }
+      .gt100 div[title],.gt200 div[title],.gt400 div[title]{border:1px solid #5C0D12}
       .g3 a { color: #FF0000 }
       div.gt { border: 1px solid #806769; background: #F2EFDF }
       div.gtl { border: 1px dashed #9a7c7e; background: #F2EFDF }
